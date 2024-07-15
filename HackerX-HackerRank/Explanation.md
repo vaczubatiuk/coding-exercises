@@ -57,6 +57,7 @@ DAG G has three properties:
 - G<sub>c</sub> Transitive Closure: The representational graph with the most edges that has the same reachability relation as the DAG. It has an edge u → v for every pair of vertices (u,v) in the reachability relation ≤ of the DAG, and may therefor be thought of as a direct translation of the reachability realtion ≤. Non-Tech Terms: Creating a new DAG that has the max number of edges possible while still adhering to the Reachability Relation.
 - 
 ![](https://files.catbox.moe/4tq6qn.jpg)
+
 G = Original DAG
 G<sub>b</sub> = Transitive Reduction
 G<sub>c</sub> = Transitive Closure.
