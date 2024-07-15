@@ -88,16 +88,27 @@ E = F = Frequency
 - Now since we are looking for all possible missiles needed, our best approach is a Transitive Reduction, removing entries that don't require new missiles, and at the end, count the number of vertices in the resulting culled set.
 
 So we build our DAG on this by first order our couples set by the time (in case it is not sorted already). Next we take the sum and difference between Time vs Frequency and generate a list: 
+
 Original Set              Transitive Set.
+
 (65, 844)	  =>(a+b,a-b)=>	(628, -226)
+
 (70, 993)	  =>(a+b,a-b)=>	(656, 120)
+
 (201, 427)	=>(a+b,a-b)=>	(856, 24)
+
 (348, 899)	=>(a+b,a-b)=>	(880, 38)
+
 (388, 268)	=>(a+b,a-b)=>	(909, -779)
+
 (440, 416)	=>(a+b,a-b)=>	(991, 749)
+
 (459, 421)	=>(a+b,a-b)=>	(1035, 453)
+
 (459, 796)	=>(a+b,a-b)=>	(1063, -923)
+
 (744, 291)	=>(a+b,a-b)=>	(1247, -551)
+
 (870, 121)	=>(a+b,a-b)=>	(1255, -337)
 
 At this point, all we really care about is the differce on Time vs Frequency, due to our Reeachability Relation, as Frequency is dependant on time.
