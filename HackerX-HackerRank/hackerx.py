@@ -70,7 +70,7 @@ Current Results: {results}""")
         if high == len(results):
             results.append(y)
         # Else, it was discovered that a missile was not needed at current vertex point. 
-        # We then set value of results at idx mid to the value of y. 
+        # We then set value of results at idx mid to the value of y. This represents a possible small change in frequency of our current missile but not enough to warrant a new missile.
         else:
             results[high] = y
 
