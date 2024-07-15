@@ -84,7 +84,7 @@ E = F = Frequency
 
 - According to the problem we need the to check if a specific object requires a new missile base on dT and dF to each other. 
 - And according to the problem, the delta change ration is 1:1, 1 unit of time is required for 1 unit of frequency shift the the oncomming objects. If a missile requires more than more frequency units than the alloted time between missiles, then a new missile will take its place.
-- Once a missile is in the air, it can relock onto any frequency that is one more or less than its current frequency vs time in regards subsequent objects after new missiles are fired. So three objects come in, (1,1),(2,3),(3,2). The second object requires a new missile since time only shifted one but frequency shifted by 2. However, the third object can be hit by the first missile since there is more time alloted between the first and third than frequency increase. This is our Reachability Relation.
+- Once a missile is in the air, it can relock onto any frequency that is one more or less than its current frequency vs time in regards subsequent objects after new missiles are fired. So three objects come in, (1,4),(2,6),(3,3). The second object requires a new missile since time only shifted one but frequency shifted by 2. However, the third object can be hit by the first missile since there is more time alloted between the first and third than frequency increase. This is our Reachability Relation.
 - Now since we are looking for all possible missiles needed, our best approach is a Transitive Reduction, removing entries that don't require new missiles, and at the end, count the number of vertices in the resulting culled set.
 
 So we build our DAG on this by first order our couples set by the time (in case it is not sorted already). Next we take the sum and difference between Time vs Frequency and generate a list: 
@@ -103,6 +103,6 @@ Original Set              Transitive Set.
 At this point, all we really care about is the differce on Time vs Frequency, due to our Reeachability Relation, as Frequency is dependant on time.
 [-226, 120, 24,38, -779, 749, 453, -923, -551, -337]
 
-There we iterate through the the positions, checking through through one loop (Through every element in the set, O(n) and then have it go through another loop only comparing through the set only if specific conditions is met, and if the specific condition is no longer met during the search, the code will move on to the next set item for its own iterations, reducing n number of left over iterations, where the iterations could n to n<sup>2</sup>, O(logn). Since O(logn) is dependent on the O(n) portion, the final complexity is O(nlogn), one step down from O(n<sup>2</sup>).
+There we iterate through the the positions, checking through through one loop (Through every element in the set, O(n) and then have it go through another loop only comparing through the set only if specific conditions is met, and if the specific condition is no longer met during the search, the code will move on to the next set item for its own iterations, reducing n number of left over iterations, where the iterations could n to under n<sup>2</sup>, O(logn). Since O(logn) is dependent on the O(n) portion, the final complexity is O(nlogn), one step down from O(n<sup>2</sup>).
 
 
