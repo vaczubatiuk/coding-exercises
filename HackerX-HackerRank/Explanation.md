@@ -1,4 +1,4 @@
-Miminum Path Cover Problem
+# Miminum Path Cover Problem
 ========
 A path cover is a directed graph G=(V,E) is a set P of vertex-disjointed paths such that every vertex in V is included in exactly one path in P. Pathsj may start and end anyuwhere, and they may be of any length, including 0. A minimum path cover of G is a path cover conatining the fewest possible points
 
@@ -11,7 +11,7 @@ And run a maximum-flow algorithm.
 
 Quick scientific explanation of the Minimum Path Cover problem: https://walkccc.me/CLRS/Chap26/Problems/26-2/
 
-###Explanation###
+## Explanation
 
 Given two missiles i and j, where as Tj >= Ti (missiles sorted via time of T)
 
@@ -20,7 +20,7 @@ A single hackerX missile can be used to stop both i and j if the difference in f
         Tj - Ti >= |Fj - Fi| 
 ```
 
-###An O(n squared) Solution###
+## An O(n squared) Solution
 For now, For simplicity sake, lets make the assumption:
 ```
         Fi > Fj
