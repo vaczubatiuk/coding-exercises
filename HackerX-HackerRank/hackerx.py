@@ -44,7 +44,7 @@ def missileDefend(missles):
         print_or_log("""
 =====================================""")
         print_or_log(f"""Y positition: {y} for array: {missles} 
-with coefficents: {y_points}""")
+with coefficents: {ypoints}""")
         print_or_log("""=====================================""")
         # =================================================================================================================\
         # While block will only when there are at least 1 entries in integer list, results. (0 - 1 =  1 )                  |
