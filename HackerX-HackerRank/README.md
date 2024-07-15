@@ -1,5 +1,5 @@
 # Hacker X
-4
+
 Evil Nation A is angry and plans to launch N guided-missiles at the peaceful Nation B in an attempt to wipe out all of Nation B’s people. Nation A’s missile i will arrive in nation B at the time ti. Missile i communicates with its headquarters by unique radio signals with a frequency equal to fi. Can you help the peaceful Nation B survive by building a defensive system that will stop the missiles dead in the sky?
 
 ## Defensive system:
