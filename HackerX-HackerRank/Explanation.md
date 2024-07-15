@@ -4,8 +4,9 @@ A path cover is a directed graph G=(V,E) is a set P of vertex-disjointed paths s
 
 Given an efficient algorithm to find a minimum path cover of a directed acyclic graph G=(V,E). Assuming that V = {1,2,...,n}, construct the graph G'=(V',E'), where :
 
-        V′​={ x<sub>0​,</sub>, x<sub>1</sub>​, … , x<sub>n</sub> ​} ∪ { y<sub>0</sub>​, y<sub>1​</sub>, … , y<sub>n</sub> ​},
-        E′={ (x<sub>0​</sub>,x<sub>i</sub>​) : i ∈ V } ∪ { (y<sub>i</sub>​,y<sub>0​) : i ∈ V } ∪ { (x<sub>i​</sub>,y<sub>j</sub>​) : (i,j) ∈ E },​
+V′​={ x<sub>0​,</sub>, x<sub>1</sub>​, … , x<sub>n</sub> ​} ∪ { y<sub>0</sub>​, y<sub>1​</sub>, … , y<sub>n</sub> ​},
+E′={ (x<sub>0​</sub>,x<sub>i</sub>​) : i ∈ V } ∪ { (y<sub>i</sub>​,y<sub>0​) : i ∈ V } ∪ { (x<sub>i​</sub>,y<sub>j</sub>​) : (i,j) ∈ E },​
+
 
 And run a maximum-flow algorithm.
 
