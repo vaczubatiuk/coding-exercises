@@ -71,9 +71,13 @@ So how does that relate to the Hacker X problem?
 
 Well lets take a sample set of couples and create a DAG out of it:
 [(65,844),(70,993),(201,427),(348,899),(388,268),(440,416),(459,421),(459,796),(744,291),(870,121)]
+
 G=(V,E)
+
 V = T = Time
+
 E = F = Frequency
+
 ∑<sup>n</sup><sub>G=1</sub> = [(65,844),(70,993),(201,427),(348,899),(388,268),(440,416),(459,421),(459,796),(744,291),(870,121)]
 
 ### Stipulations:
