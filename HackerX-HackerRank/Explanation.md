@@ -49,6 +49,8 @@ Wikipedia will tell you: "In mathematics, particularly graph theory, and compute
 
 ![](https://upload.wikimedia.org/wikipedia/commons/f/fe/Tred-G.svg)
 
+### Time to add some DAG
+
 For our purposes we are gonig to exploit the properties of a DAG to solve the HackerX solution.
 Back to the Wikipedia (What is great about it, is that for nerd stuff like this, it is always correct since no one understands it):
 DAG G has three properties:
@@ -66,8 +68,16 @@ G<sub>c</sub> = Transitive Closure.
 So how does that relate to the Hacker X problem?
 
 Well lets take a sample set of couples and create a DAG out of it:
-∑ = [(65,844),(70,993),(201,427),(348,899),(388,268),(440,416),(459,421),(459,796),(744,291),(870,121)]
-G=(V,E) 
+[(65,844),(70,993),(201,427),(348,899),(388,268),(440,416),(459,421),(459,796),(744,291),(870,121)]
+G=(V,E)
 V = T = Time
 E = F = Frequency
-∑<sup>n</sup><sub>T=1</sub><sup>n</sup> = [(65,844),(70,993),(201,427),(348,899),(388,268),(440,416),(459,421),(459,796),(744,291),(870,121)]
+∑<sup>n</sup><sub>G=1</sub> = [(65,844),(70,993),(201,427),(348,899),(388,268),(440,416),(459,421),(459,796),(744,291),(870,121)]
+
+### Stipulations:
+
+- According to the problem we need the to check if a specific object requires a new missile base on dT and dF to each other. 
+- And according to the problem, the delta change ration is 1:1, 1 unit of time is required for 1 unit of frequency shift the the oncomming objects. If a missile requires more than more frequency units than the alloted time between missiles, then a new missile will take its place.
+- Once a missile is in the air, it can relock onto any frequency that is one more or less than its current frequency vs time in regards subsequent objects after new missiles are fired. So three objects come in, (1,1),(2,3),(3,2). The second object requires a new missile since time only shifted one but frequency shifted by 2. However, the third object can be hit by the first missile since there is more time alloted between the first and third than frequency increase. This is our Reachability Relation.
+- Now since we are looking for all possible missiles needed, our best approach is a Transitive Reduction, removing entries that don't require new missiles, and at the end, count the number of vertices in the resulting culled set.
+
