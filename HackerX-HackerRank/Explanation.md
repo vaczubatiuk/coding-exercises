@@ -55,9 +55,19 @@ DAG G has three properties:
 - Reachability Relation: Which is the partial order ≤ on the vertices of a DAG. In the partial order, two vertices: u and v are ordered as u ≤ v exactly where there exists a directed path from u to v in the DAG; that is, when u can reach v (or v is reachable from u). Non-tech terms: The previous vertex position, rank or value should be lower than the current vertex.
 - G<sub>b</sub> Transitive Reduction: The representational DAG with the least easts that has the same reachability relation as the original DAG.  It has an edge u → v for every pair of vertices (u, v) in the covering relation of the reachability relation ≤ of the DAG. It is a subgraph of the DAG, formed by discarding the edges u → v for which the DAG also contains a longer directed path from u to v. Non-Tech Terms: Creating a new DAG that has the minimum number of edges possible while still adhering to the Reachability Relation.
 - G<sub>c</sub> Transitive Closure: The representational graph with the most edges that has the same reachability relation as the DAG. It has an edge u → v for every pair of vertices (u,v) in the reachability relation ≤ of the DAG, and may therefor be thought of as a direct translation of the reachability realtion ≤. Non-Tech Terms: Creating a new DAG that has the max number of edges possible while still adhering to the Reachability Relation.
-- 
+
+
 ![](https://files.catbox.moe/4tq6qn.jpg)
 
 G = Original DAG
 G<sub>b</sub> = Transitive Reduction
 G<sub>c</sub> = Transitive Closure.
+
+So how does that relate to the Hacker X problem?
+
+Well lets take a sample set of couples and create a DAG out of it:
+∑ = [(65,844),(70,993),(201,427),(348,899),(388,268),(440,416),(459,421),(459,796),(744,291),(870,121)]
+G=(V,E) 
+V = T = Time
+E = F = Frequency
+∑<sub>T=1</sub><sup>n</sup> = [(65,844),(70,993),(201,427),(348,899),(388,268),(440,416),(459,421),(459,796),(744,291),(870,121)]
