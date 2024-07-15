@@ -20,7 +20,7 @@ A single hackerX missile can be used to stop both i and j if the difference in f
         Tj - Ti >= |Fj - Fi| 
 ```
 
-## An O(n squared) Solution
+## An O(n<sup>2</sup>) Solution
 For now, For simplicity sake, lets make the assumption:
 ```
         Fi > Fj
@@ -38,6 +38,6 @@ Lastly, add Ti to both sides, transforming the condition to:
       Tj + Fj >= Ti + Fi
 ```
 
-It is stated that we need at least one HackerX missile to cover the first missile. The question after, is how many other missiles can the first missile cover. To find this out, a linear scan through the list would display it. Then a simple check to see each subsequent value satisifies the condition. However, this is not a great solution, due to the O(n squared) time of complexity. Which can be done better.
+It is stated that we need at least one HackerX missile to cover the first missile. The question after, is how many other missiles can the first missile cover. To find this out, a linear scan through the list would display it. Then a simple check to see each subsequent value satisifies the condition. However, this is not a great solution, due to the O(n<sup>2</sup>) time of complexity. Which can be done better.
 
 ###Finding the Correct Way###
