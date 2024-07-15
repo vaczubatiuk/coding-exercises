@@ -3,10 +3,10 @@
 A path cover is a directed graph G=(V,E) is a set P of vertex-disjointed paths such that every vertex in V is included in exactly one path in P. Pathsj may start and end anyuwhere, and they may be of any length, including 0. A minimum path cover of G is a path cover conatining the fewest possible points
 
 Given an efficient algorithm to find a minimum path cover of a directed acyclic graph G=(V,E). Assuming that V = {1,2,...,n}, construct the graph G'=(V',E'), where :
-```
-        V′​={ x<sub>0​,</sub>, x1​, … , xn ​} ∪ { y0​, y1​, … , yn ​},
-        E′={ (x0​,xi​) : i ∈ V } ∪ { (yi​,y0​) : i ∈ V } ∪ { (xi​,yj​) : (i,j) ∈ E },​
-```
+
+        V′​={ x<sub>0​,</sub>, x<sub>1</sub>​, … , x<sub>n</sub> ​} ∪ { y<sub>0</sub>​, y<sub>1​</sub>, … , y<sub>n</sub> ​},
+        E′={ (x<sub>0​</sub>,x<sub>i</sub>​) : i ∈ V } ∪ { (y<sub>i</sub>​,y<sub>0​) : i ∈ V } ∪ { (x<sub>i​</sub>,y<sub>j</sub>​) : (i,j) ∈ E },​
+
 And run a maximum-flow algorithm.
 
 Quick scientific explanation of the Minimum Path Cover problem: https://walkccc.me/CLRS/Chap26/Problems/26-2/
