@@ -3,6 +3,15 @@ import sys
 import pprint
 DEBUG = False
 log = open("OUTPUT.log","w")
+
+
+
+
+# Function: print_or_log
+# Paramter: A single string
+# Output:    Either prints to CL or prints to log depending on debugging mode.
+def print_or_log(string):
+    print(string) if DEBUG else log.write(string)
 # Function: missleDefend
 # Parameter: Two dimensional list (list of lists) of integer:
 #               - subelement 0 = reflects time (t)
@@ -10,10 +19,7 @@ log = open("OUTPUT.log","w")
 # Output: A single integer representing the number of missiles used.
 # Methods: Minimum Path Cover using DAG.
 
-def print_or_log(string):
-    print(string) if DEBUG else log.write(string)
 def missileDefend(missles):
-
     # =================================================================================================================\
     # Instantiated sorted couples of sums and differences between time and frequency,                                  |
     # generating our DAG, with a list of vertex points.                                                                |
@@ -41,11 +47,14 @@ def missileDefend(missles):
         # Setting our highest value.                                                                                       |
         # =================================================================================================================/
         high = len(results)
-        print_or_log("""
+        print_or_log(
+"""
 ======================================
 Y positition: {y} for array: {missles} 
 with coefficents: {ypoints}
-======================================""")
+======================================
+"""
+        )
         # =================================================================================================================\
         # While block will only when there are at least 1 entries in integer list, results. (0 - 1 =  1 )                  |
         # At the same time, once the difference of high and low below 1, then it means that high reached                   |
@@ -54,10 +63,12 @@ with coefficents: {ypoints}
         while high-low > 1:
             (count := count+1) if DEBUG else ""
 
-            print_or_log(f"""
+            print_or_log(
+f"""
 Iteration {count}
 Current Results: {results}
-""")
+"""
+            )
             # =================================================================================================================\
             # Gets the representational index for our acyclic path in our DAG.                                                 |
             # =================================================================================================================/
@@ -96,10 +107,11 @@ Current Results: {results}
         else:
             results[high] = y
 
-    print_or_log(f
-"""
+    print_or_log(
+f"""
 Final Results: {results}
-""")
+"""
+    )
     return len(results)
     
 if __name__ == '__main__':
@@ -123,8 +135,11 @@ if __name__ == '__main__':
     else:
         DEBUG = True
         lines = [(65,844),(70,993),(201,427),(348,899),(388,268),(440,416),(459,421),(459,796),(744,291),(870,121)]
-    print_or_log(f"""
+    print_or_log(
+f"""
 Total number of missiles required: {str(missileDefend(lines))}
 For the following time and frequency of each incomming missiles:
-{lines}""")
-    #{pprint.pprint(lines)}
+{lines}
+"""
+    )
+    
