@@ -42,10 +42,10 @@ def missileDefend(missles):
         # =================================================================================================================/
         high = len(results)
         print_or_log("""
-=====================================""")
-        print_or_log(f"""Y positition: {y} for array: {missles} 
-with coefficents: {ypoints}""")
-        print_or_log("""=====================================""")
+======================================
+Y positition: {y} for array: {missles} 
+with coefficents: {ypoints}
+======================================""")
         # =================================================================================================================\
         # While block will only when there are at least 1 entries in integer list, results. (0 - 1 =  1 )                  |
         # At the same time, once the difference of high and low below 1, then it means that high reached                   |
@@ -56,7 +56,8 @@ with coefficents: {ypoints}""")
 
             print_or_log(f"""
 Iteration {count}
-Current Results: {results}""")
+Current Results: {results}
+""")
             # =================================================================================================================\
             # Gets the representational index for our acyclic path in our DAG.                                                 |
             # =================================================================================================================/
@@ -95,7 +96,8 @@ Current Results: {results}""")
         else:
             results[high] = y
 
-    print_or_log(f"""
+    print_or_log(f
+"""
 Final Results: {results}
 """)
     return len(results)
@@ -121,7 +123,8 @@ if __name__ == '__main__':
     else:
         DEBUG = True
         lines = [(65,844),(70,993),(201,427),(348,899),(388,268),(440,416),(459,421),(459,796),(744,291),(870,121)]
-    print_or_log(f"""Total number of missiles required: {str(missileDefend(lines))}
+    print_or_log(f"""
+Total number of missiles required: {str(missileDefend(lines))}
 For the following time and frequency of each incomming missiles:
 {lines}""")
     #{pprint.pprint(lines)}
