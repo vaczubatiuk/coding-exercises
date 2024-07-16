@@ -48,7 +48,7 @@ def missileDefend(missles):
         # =================================================================================================================/
         high = len(results)
         print_or_log(
-"""
+f"""
 ======================================
 Y positition: {y} for array: {missles} 
 with coefficents: {ypoints}
