@@ -148,6 +148,10 @@ G=(V,E)
 V = T = Time
 
 E = F = Frequency
+
+dT = delta Time = Change in time between the previous time and the current time.
+
+dF = delta Frequency = Change in frequency between the previous time and the current time.
 ```
 ∑<sup>n</sup><sub>G=1</sub> = [(65,844),(70,993),(201,427),(348,899),(388,268),(440,416),(459,421),(459,796),(744,291),(870,121)]
 
@@ -182,6 +186,7 @@ Original Set              Transitive Set.
 
 (870, 121)	=>(a+b,a-b)=>	(1255, -337)
 ```
+This allows us to compare a single value instead of two since we will only care about the difference value, y
 At this point, all we really care about is the differce on Time vs Frequency, due to our Reeachability Relation, as Frequency is dependant on time.
 [-226, 120, 24,38, -779, 749, 453, -923, -551, -337]
 
