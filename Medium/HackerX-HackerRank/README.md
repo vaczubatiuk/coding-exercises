@@ -19,10 +19,10 @@ A single integer denoting the minimum number of hackerX’s you need to defend t
 
 ## Constraints:
 ```
-1 <= N <= 100000
-0 <= ti <= 100000
-0 <= fi <= 100000
-t1 <= t2 <= … <= tN
+1 ≤ N ≤ 100000
+0 ≤ ti ≤ 100000
+0 ≤ fi ≤ 100000
+t1 ≤ t2 ≤ … ≤ tN
 ```
 
 ## Sample Input:
@@ -165,7 +165,7 @@ dF = delta Frequency = Change in frequency between the previous time and the cur
 So we build our DAG on this by first order our couples set by the time (in case it is not sorted already). Next we take the sum and difference between Time vs Frequency and generate a list: 
 ```
 Original Set              Transitive Set.
-
+  (a, b)                      (x, y)
 (65, 844)	  =>(a+b,a-b)=>	(628, -226)
 
 (70, 993)	  =>(a+b,a-b)=>	(656, 120)
@@ -187,9 +187,52 @@ Original Set              Transitive Set.
 (870, 121)	=>(a+b,a-b)=>	(1255, -337)
 ```
 This allows us to compare a single value instead of two since we will only care about the difference value, y
+Why? The difference still represets the points x and y due to the mathematical associative rule of Addition:
+```
+Given vertex points
+(x<sub>a</sub>,y<sub>a</sub>)
+(x<sub>b</sub>,y<sub>b</sub>)
+
+The Associative Property in action:
+x<sub>a</sub> - y<sub>a</sub> = z<sub>a</sub>
+x<sub>b</sub> - y<sub>b</sub> = z<sub>b</sub
+
+x<sub>b</sub> - x<sub>a</sub> = dx<sub>a</sub>
+y<sub>b</sub> - y<sub>a</sub> = dy<sub>a</sub>
+
+z<sub>b</sub>   - z<sub>a</sub>   = dz<sub>a</sub>
+dy<sub>a</sub>  - dx<sub>a</sub>  = dz<sub>a</sub>
+```
+So if we check the difference between the vertex points or the x-y difference we end up in the same result. Since using a single number comparison is simpler than a tuple comparison, gonig with the x-y difference solution, is much more efficient. 
+
 At this point, all we really care about is the differce on Time vs Frequency, due to our Reeachability Relation, as Frequency is dependant on time.
 [-226, 120, 24,38, -779, 749, 453, -923, -551, -337]
 
-There we iterate through the the positions, checking through through one loop (Through every element in the set, O(n) and then have it go through another loop only comparing through the set only if specific conditions is met, and if the specific condition is no longer met during the search, the code will move on to the next set item for its own iterations, reducing n number of left over iterations, where the iterations could be from n to under n<sup>2</sup> number of iterations, O(logn). Since O(logn) is dependent on the O(n) portion, the final complexity is O(nlogn), one step down from O(n<sup>2</sup>).
+There we iterate through the the positions, checking through through one loop through every element in the set, O(n) and then have it go through another loop only comparing through the set only if specific conditions is met, and if the specific condition is no longer met during the search, the code will move on to the next set item for its own iterations, reducing n number of left over iterations, where the iterations could be from n to under n<sup>2</sup> number of iterations, O(logn). Since O(logn) is dependent on the O(n) portion, the final complexity is O(nlogn), one step down from O(n<sup>2</sup>).
 
 
+x<sub>a</sub> - y<sub>a</sub> = z<sub>a</sub>
+x<sub>b</sub> - y<sub>b</sub> = z<sub>b</sub>
+
+z<sub>b</sub> - z<sub>a</sub> = dz<sub>a</sub>
+
+x<sub>b</sub> - x<sub>a</sub> - dx<sub>a</sub>
+y<sub>b</sub> - y<sub>a</sub> - dy<sub>a</sub>
+
+dy<sub>a</sub> - dx<sub>a</sub> = dz<sub>a</sub>
+
+10 5
+
+10-5 = 5
+
+15 7
+
+15-7 = 8
+
+5-8 = -3
+5
+
+15 -10 = 5
+7-5 = 2
+2-5 = -3
+-7 - -5 
