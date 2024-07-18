@@ -9,7 +9,7 @@ log = open("OUTPUT.log","w")
 
 # Function: print_or_log
 # Paramter: A single string
-# Output:    Either prints to CL or prints to log depending on debugging mode.
+# Output:   Either prints to CL or prints to log depending on debugging mode.
 def print_or_log(string):
     print(string) if DEBUG else log.write(string)
 # Function: missleDefend
