@@ -68,6 +68,7 @@ Destroy 1 missile at t = 1, f = 1, now at t = 2, there is a missile with frequen
 # Solution Explanation
 
 ## Miminum Path Cover Problem
+
 Ultimately this is known as a Miminum path cover problem.
 A path cover is a directed graph G=(V,E) is a set P of vertex-disjointed paths such that every vertex in V is included in exactly one path in P. Paths may start and end anywhere, and they may be of any length, including 0. A minimum path cover of G is a path cover conatining the fewest possible points
 
@@ -80,9 +81,9 @@ Given an efficient algorithm to find a minimum path cover of a directed acyclic 
 
 And run a maximum-flow algorithm.
 
-Quick scientific explanation of the Minimum Path Cover problem: https://walkccc.me/CLRS/Chap26/Problems/26-2/
+Source: https://walkccc.me/CLRS/Chap26/Problems/26-2/
 
-## Explanation
+## Explanation of the Problem
 
 Given two missiles i and j, where as T<sub>j</sub> >= T<sub>i</sub> (missiles sorted via time of T)
 
@@ -92,6 +93,7 @@ A single hackerX missile can be used to stop both i and j if the difference in f
 
 
 ## An O(n<sup>2</sup>) Solution
+
 For now, For simplicity sake, lets make the assumption:
 
 - F<sub>i</sub> > F<sub>j</sub>
@@ -116,7 +118,7 @@ It is stated that we need at least one HackerX missile to cover the first missil
 What is a DAG:
 Wikipedia will tell you: "In mathematics, particularly graph theory, and computer science, a directed acyclic graph (DAG) is a directed graph with no directed cycles. That is, it consists of vertices and edges (also called arcs), with each edge directed from one vertex to another, such that following those directions will never form a closed loop."
 
-![](https://upload.wikimedia.org/wikipedia/commons/f/fe/Tred-G.svg)
+![Wikepedia](https://upload.wikimedia.org/wikipedia/commons/f/fe/Tred-G.svg)
 
 A good example of a DAG in action: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8821727/
 
