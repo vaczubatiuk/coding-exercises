@@ -187,23 +187,34 @@ Original Set              Transitive Set.
 (870, 121)	=>(a+b,a-b)=>	(1255, -337)
 ```
 This allows us to compare a single value instead of two since we will only care about the difference value, y
-Why? The difference still represets the points x and y due to the mathematical associative rule of Addition:
+Why? The difference still represets the points x and y due to the mathematical associative rule of addition:
 
 #### Given vertex points
 
-( x<sub>a</sub>, y<sub>a</sub> )
-( x<sub>b</sub>, y<sub>b</sub> )
+( x<sub>a</sub>, y<sub>a</sub> ) = (10, 2)
+
+( x<sub>b</sub>, y<sub>b</sub> ) = (15, 7)
+
+
+
 
 #### The Associative Property in action:
 
-x<sub>a</sub> - y<sub>a</sub> = z<sub>a</sub>
-x<sub>b</sub> - y<sub>b</sub> = z<sub>b</sub
+Comparing the tuples.
 
-x<sub>b</sub> - x<sub>a</sub> = dx<sub>a</sub>
-y<sub>b</sub> - y<sub>a</sub> = dy<sub>a</sub>
+x<sub>a</sub> - y<sub>a</sub> = z<sub>a</sub>    |  10 - 2 = 8
 
-z<sub>b</sub>   - z<sub>a</sub>   = dz<sub>a</sub>
-dy<sub>a</sub>  - dx<sub>a</sub>  = dz<sub>a</sub>
+x<sub>b</sub> - y<sub>b</sub> = z<sub>b</sub>    |  15 - 7 = 8
+
+z<sub>b</sub>   - z<sub>a</sub>   = dz<sub>a</sub>    |  8 - 8 = 0
+
+Comparing the x-y differences.
+
+x<sub>b</sub> - x<sub>a</sub> = dx<sub>a</sub>    |  15 - 10 = 5
+
+y<sub>b</sub> - y<sub>a</sub> = dy<sub>a</sub>    | 7 - 2 = 5
+
+dy<sub>a</sub>  - dx<sub>a</sub>  = dz<sub>a</sub>    | 5 - 5 = 0
 
 So if we check the difference between the vertex points or the x-y difference we end up in the same result. Since using a single number comparison is simpler than a tuple comparison, gonig with the x-y difference solution is much more efficient. 
 
