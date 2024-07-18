@@ -20,6 +20,7 @@ def print_or_log(string):
 # Methods: Minimum Path Cover using DAG.
 
 def missileDefend(missles):
+    count = 0
     # =================================================================================================================\
     # Instantiated sorted couples of sums and differences between time and frequency,                                  |
     # generating our DAG, with a list of vertex points.                                                                |
@@ -136,10 +137,10 @@ if __name__ == '__main__':
         DEBUG = True
         lines = [(65,844),(70,993),(201,427),(348,899),(388,268),(440,416),(459,421),(459,796),(744,291),(870,121)]
     print_or_log(
-f"""
-Total number of missiles required: {str(missileDefend(lines))}
-For the following time and frequency of each incomming missiles:
-{lines}
-"""
+f"""/=========================================================================================================================
+| Total number of missiles required: {str(missileDefend(lines))}   
+| For the following time and frequency of each incomming missiles: 
+| {lines} 
+\\========================================================================================================================="""
     )
     
