@@ -136,7 +136,7 @@ if __name__ == '__main__':
     else:
         DEBUG = True
         lines = [(65,844),(70,993),(201,427),(348,899),(388,268),(440,416),(459,421),(459,796),(744,291),(870,121)]
-    print_or_log(
+    print(
 f"""/=========================================================================================================================
 | Total number of missiles required: {str(missileDefend(lines))}   
 | For the following time and frequency of each incomming missiles: 
