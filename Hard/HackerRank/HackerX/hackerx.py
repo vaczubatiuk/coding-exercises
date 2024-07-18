@@ -62,14 +62,6 @@ with coefficents: {ypoints}
         # the end of its comparative search. (hitting negative)                                                            |
         # =================================================================================================================/
         while high-low > 1:
-            (count := count+1) if DEBUG else ""
-
-            print_or_log(
-f"""
-Iteration {count}
-Current Results: {results}
-"""
-            )
             # =================================================================================================================\
             # Gets the representational index for our acyclic path in our DAG.                                                 |
             # =================================================================================================================/
