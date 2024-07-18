@@ -3,16 +3,19 @@ import sys
 DEBUG = False
 log = open("OUTPUT.log","w")
 
+# ==============================================================================
 # Function: print_or_log
 # Paramter: A single string
 # Output:   Either prints to CL or prints to log depending on debugging mode.
+# ==============================================================================
 def print_or_log(string):
     print(string) if DEBUG else log.write(string)
 
-
+# ==============================================================================
 # Function: leftRotation
 # Parameter: one integer and one list
 # Output: a left rotated list.
+# ==============================================================================
 def leftRotation(c,array):
     # Cloning the array, it makes for better flow control. 
     result = list(array)
@@ -60,7 +63,8 @@ Established number of left rotations: {count}
 )
         data = [1,2,3,4,5]
         print_or_log(data)
-        output = leftRotation(count,data)
         DEBUG = True
+    
+    output = leftRotation(count,data)
     print(output)
     log.close()
