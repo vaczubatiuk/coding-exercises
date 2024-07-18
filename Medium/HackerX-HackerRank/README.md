@@ -189,11 +189,13 @@ Original Set              Transitive Set.
 This allows us to compare a single value instead of two since we will only care about the difference value, y
 Why? The difference still represets the points x and y due to the mathematical associative rule of Addition:
 
-Given vertex points
-(x<sub>a</sub>,y<sub>a</sub>)
-(x<sub>b</sub>,y<sub>b</sub>)
+#### Given vertex points
 
-The Associative Property in action:
+( x<sub>a</sub>, y<sub>a</sub> )
+( x<sub>b</sub>, y<sub>b</sub> )
+
+#### The Associative Property in action:
+
 x<sub>a</sub> - y<sub>a</sub> = z<sub>a</sub>
 x<sub>b</sub> - y<sub>b</sub> = z<sub>b</sub
 
@@ -203,7 +205,7 @@ y<sub>b</sub> - y<sub>a</sub> = dy<sub>a</sub>
 z<sub>b</sub>   - z<sub>a</sub>   = dz<sub>a</sub>
 dy<sub>a</sub>  - dx<sub>a</sub>  = dz<sub>a</sub>
 
-So if we check the difference between the vertex points or the x-y difference we end up in the same result. Since using a single number comparison is simpler than a tuple comparison, gonig with the x-y difference solution, is much more efficient. 
+So if we check the difference between the vertex points or the x-y difference we end up in the same result. Since using a single number comparison is simpler than a tuple comparison, gonig with the x-y difference solution is much more efficient. 
 
 At this point, all we really care about is the differce on Time vs Frequency, due to our Reeachability Relation, as Frequency is dependant on time.
 [-226, 120, 24,38, -779, 749, 453, -923, -551, -337]
