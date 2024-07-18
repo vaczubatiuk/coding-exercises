@@ -210,29 +210,3 @@ At this point, all we really care about is the differce on Time vs Frequency, du
 
 There we iterate through the the positions, checking through through one loop through every element in the set, O(n) and then have it go through another loop only comparing through the set only if specific conditions is met, and if the specific condition is no longer met during the search, the code will move on to the next set item for its own iterations, reducing n number of left over iterations, where the iterations could be from n to under n<sup>2</sup> number of iterations, O(logn). Since O(logn) is dependent on the O(n) portion, the final complexity is O(nlogn), one step down from O(n<sup>2</sup>).
 
-
-x<sub>a</sub> - y<sub>a</sub> = z<sub>a</sub>
-x<sub>b</sub> - y<sub>b</sub> = z<sub>b</sub>
-
-z<sub>b</sub> - z<sub>a</sub> = dz<sub>a</sub>
-
-x<sub>b</sub> - x<sub>a</sub> - dx<sub>a</sub>
-y<sub>b</sub> - y<sub>a</sub> - dy<sub>a</sub>
-
-dy<sub>a</sub> - dx<sub>a</sub> = dz<sub>a</sub>
-
-10 5
-
-10-5 = 5
-
-15 7
-
-15-7 = 8
-
-5-8 = -3
-5
-
-15 -10 = 5
-7-5 = 2
-2-5 = -3
--7 - -5 
