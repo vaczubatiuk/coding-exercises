@@ -216,7 +216,9 @@ y<sub>b</sub> - y<sub>a</sub> = dy<sub>a</sub>    | 7 - 2 = 5
 
 dy<sub>a</sub>  - dx<sub>a</sub>  = dz<sub>a</sub>    | 5 - 5 = 0
 
-So if we check the difference between the vertex points or the x-y difference we end up in the same result. Since using a single number comparison is simpler than a tuple comparison, gonig with the x-y difference solution is much more efficient. 
+(x<sub>b</sub> - x<sub>a</sub>) - (x<sub>b</sub> - y<sub>b</sub>) = (x<sub>b</sub> - x<sub>a</sub>) - (y<sub>b</sub> - y<sub>a</sub>)
+
+So if we check the difference between the vertex points or the x-y difference we end up in the same result. Since using a single number comparison is simpler than a tuple comparison, going with the x-y difference solution is much more efficient. 
 
 At this point, all we really care about is the differce on Time vs Frequency, due to our Reeachability Relation, as Frequency is dependant on time.
 [-226, 120, 24,38, -779, 749, 453, -923, -551, -337]
