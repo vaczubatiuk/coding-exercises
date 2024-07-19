@@ -10,7 +10,11 @@ log = open("OUTPUT.log","w")
 # ==============================================================================
 def print_or_log(string):
     print(string) if DEBUG else log.write(string)
-    
+# ==============================================================================
+# Function: plusMinus
+# Parameters: a list of integers
+# Output: Prints the percentage results in 6 decimal place format
+# ==============================================================================
 def plusMinus(numberSet):
     results = [0,0,0]
     for i in numberSet:
