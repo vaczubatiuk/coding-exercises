@@ -1,6 +1,7 @@
 
 import sys
 import pprint
+import os
 DEBUG = False
 log = open("OUTPUT.log","w")
 
@@ -135,5 +136,8 @@ f"""/===========================================================================
 | {lines} 
 \\========================================================================================================================="""
     )
-    log.close()
+    if (os.path.isfile("OUTPUT.log")):
+        log.close()
+    if (os.path.getsize("OUTPUT.log") == 0):
+        os.remove("OUTPUT.log")
     
