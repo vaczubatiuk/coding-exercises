@@ -27,6 +27,7 @@ def leftRotation(arr):
     return r
 # ==============================================================================
 # Function: minMaxSum
+# Complexity O(n squared)
 # Parameter: a list of integers.
 # Output: prints min and max results to the command line.
 # ==============================================================================
@@ -51,6 +52,29 @@ def minMaxSum(arr):
     # Print the result.
     print(f"{minResult} {maxResult}")
 
+
+# ==============================================================================
+# Function: minMaxSum2
+# Complexity O(nlogn)
+# Parameter: a list of integers.
+# Output: prints min and max results to the command line.
+# ==============================================================================
+def minMaxSum2(arr):
+    # We sort the list (Complexity O(nlogn)
+    r1 = sorted(arr)
+    # Clone the sorted
+    r2 = list(r1)
+    # Drops the lowest value element
+    r2.pop(0)
+    # Drops the highest value element
+    r1.pop(len(r1)-1)
+    # Get the sums
+    minResult = sum(r1)
+    maxResult = sum(r2)
+    # Return the sums
+    print(f"{minResult} {maxResult}")
+
+
 if __name__ == '__main__':
     if len(sys.argv) > 1:
         with open(sys.argv[1],'r') as file:
@@ -62,4 +86,5 @@ if __name__ == '__main__':
     if (os.path.getsize("OUTPUT.log") == 0):
         os.remove("OUTPUT.log")
     minMaxSum(entry)
+    minMaxSum2(entry)
 
