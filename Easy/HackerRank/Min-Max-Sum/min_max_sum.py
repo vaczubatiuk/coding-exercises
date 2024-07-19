@@ -10,7 +10,6 @@ entry = list()
 # Paramter: A single string
 # Output:   Either prints to CL or prints to log depending on debugging mode.
 # ==============================================================================
-
 def print_or_log(string):
     print(string) if DEBUG else log.write(string)
 # ==============================================================================
@@ -78,7 +77,11 @@ def minMaxSum2(arr):
 if __name__ == '__main__':
     if len(sys.argv) > 1:
         with open(sys.argv[1],'r') as file:
-            entry = file.readlines()
+            line = file.readlines()
+
+        line = line.strip(" ")
+        for i in line:
+            entry.append(int(i))
     else:
         entry = [1, 2, 3, 4, 5]
     if (os.path.isfile("OUTPUT.log")):

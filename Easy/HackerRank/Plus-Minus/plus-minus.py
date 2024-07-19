@@ -1,5 +1,16 @@
 import sys
+import os
 
+DEBUG = False
+log = open("OUTPUT.log","w")
+# ==============================================================================
+# Function: print_or_log
+# Paramter: A single string
+# Output:   Either prints to CL or prints to log depending on debugging mode.
+# ==============================================================================
+def print_or_log(string):
+    print(string) if DEBUG else log.write(string)
+    
 def plusMinus(numberSet):
     results = [0,0,0]
     for i in numberSet:
@@ -17,11 +28,11 @@ if __name__ == '__main__':
     
     if len(sys.arvg) > 1:
         numberSet = list()
-        with open(sys.argv[1],'r') as file:'
+        with open(sys.argv[1],'r') as file:
             lines = file.readlines()
             length = lines.pop
             lines = lines.strip(" ")
-            for i in lines
+            for i in lines:
                 x = int(i)
                 numberSet.append(x)
         if len(sys.argv) > 2:
