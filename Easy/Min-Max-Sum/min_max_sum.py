@@ -20,7 +20,7 @@ def print_or_log(string):
 #         i.e: [1, 2, 3, 4, 5] => [2, 3, 4, 5, 1] 
 # ==============================================================================
 def leftRotation(arr):
-    r = list(arr)
+    r = [a for a in arr]
     t = r.pop(0)
     r.append(t)
     return r
@@ -34,11 +34,11 @@ def minMaxSum(arr):
     # Setting min and max to infinity and negative infinity respectfuly.
     minResult,maxResult = (float('inf'),float('-inf'))
     # Cloning the list so we don't manipuate the original.
-    result = list(arr)
+    result = [a for a in arr]
     # Looping through the elements of result
     for i in range(len(result)):
         # Clone the list for manipulations without affecing the loop.
-        tempL = list(result)
+        tempL = [r for r in result]
         # Pop the first entry to reduce the elements to 4
         tempL.pop(0)
         # Add together all the left over elements
@@ -62,7 +62,7 @@ def minMaxSum2(arr):
     # We sort the list (Complexity O(nlogn)
     r1 = sorted(arr)
     # Clone the sorted
-    r2 = list(r1)
+    r2 = [r for r in r1]
     # Drops the lowest value element
     r2.pop(0)
     # Drops the highest value element

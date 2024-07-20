@@ -19,13 +19,13 @@ def print_or_log(string):
 # ==============================================================================
 def leftRotation(c,array):
     # Cloning the array, it makes for better flow control. 
-    result = list(array)
+    result = [a for a in array]
     print_or_log(result)
     # Rotating through the list to perform the left rotations.
     for i in range(c):
         # Pop the first 
         item = result.pop(0)
-        print_or_log(af
+        print_or_log(
 f"""
 The next idx 0 value to push to the back: {item}
 """ 
