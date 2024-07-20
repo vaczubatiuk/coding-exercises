@@ -58,7 +58,7 @@ with coefficents: {ypoints}
 """
         )
         # =================================================================================================================\
-        # While block will only when there are at least 1 entries in integer list, results. (0 - 1 =  1 )                  |
+        # While block will only continue when there are at least 1 entries in integer list, results. (0 - 1 =  1 )         |
         # At the same time, once the difference of high and low below 1, then it means that high reached                   |
         # the end of its comparative search. (hitting negative)                                                            |
         # =================================================================================================================/
@@ -109,15 +109,6 @@ Final Results: {results}
     return len(results)
     
 if __name__ == '__main__':
-    ### Code from HackerRank Site, not needed for Github repo ###
-    # fptr = open(os.environ['OUTPUT_PATH'], 'w')
-    # # Gets the number of rows from the first entry
-    # n = int(input().strip())
-    # # Maps the rest into a 2D array
-    # inp = (map(int, input().split()) for i in range(n))
-    # fptr.write(str(missileDefend(inp)))
-    # fptr.close
-    # Function to allow to send your own set files via command line.
     if len(sys.argv) > 1:
         with open(sys.argv[1],"r") as file:
             lines = file.readlines()
