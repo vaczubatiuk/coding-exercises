@@ -99,15 +99,15 @@ For now, For simplicity sake, lets make the assumption:
 
 To remove the absolute value, reducing the condition to:
 
-&emsp;T<sub>j</sub> - T<sub>i</sub> >= F<sub>i</sub> - F<sub>j</sub>
+&emsp;*T<sub>j</sub> - T<sub>i</sub> >= F<sub>i</sub> - F<sub>j</sub>*
 
-Next, add F<sub>j</sub> to both sides, transforming the condition to:
+Next, add *F<sub>j</sub*> to both sides, transforming the condition to:
 
-&emsp;T<sub>j</sub> - T<sub>i</sub> + F<sub>j</sub> >= F<sub>i</sub>
+&emsp;*T<sub>j</sub> - T<sub>i</sub> + F<sub>j</sub> >= F<sub>i</sub>*
 
-Lastly, add T<sub>i</sub> to both sides, transforming the condition to:
+Lastly, add *T<sub>i</sub>* to both sides, transforming the condition to:
 
-&emsp;T<sub>j</sub> + F<sub>j</sub> >= T<sub>i</sub> + F<sub>i</sub>
+&emsp;*T<sub>j</sub> + F<sub>j</sub> >= T<sub>i</sub> + F<sub>i</sub>*
 
 It is stated that we need at least one HackerX missile to cover the first missile. The question after, is how many other missiles can the first missile cover. To find this out, a linear scan through the list would display it. Then a simple check to see each subsequent value satisifies the condition. However, this is not a great solution, due to the O(n<sup>2</sup>) time of complexity. Which can be done more efficiently by using a Directed Acyclic Graph (DAG).
 
@@ -125,46 +125,42 @@ A good example of a DAG in action: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC
 For our purposes we are gonig to exploit the properties of a DAG to solve the HackerX solution.
 Back to the Wikipedia (What is great about it, is that for nerd stuff like this, it is always correct since no one understands it):
 DAG G has three properties:
-- Reachability Relation: Which is the partial order ≤ (conditional statement) on the vertices of a DAG. In the partial order, two vertices: u and v are ordered as u ≤ v exactly where there exists a directed path from u to v in the DAG; that is, when u can reach v (or v is reachable from u). Non-tech terms: The previous vertex position, rank or value should be lower than the current vertex.
-- G<sub>b</sub> Transitive Reduction: The representational DAG with the least edges that has the same reachability relation as the original DAG.  It has an edge u → v for every pair of vertices (u, v) in the covering relation of the reachability relation ≤ of the DAG. It is a subgraph of the DAG, formed by discarding the edges u → v for which the DAG also contains a longer directed path from u to v. Non-Tech Terms: Creating a new DAG that has the minimum number of edges possible while still adhering to the Reachability Relation.
-- G<sub>c</sub> Transitive Closure: The representational graph with the most edges that has the same reachability relation as the DAG. It has an edge u → v for every pair of vertices (u,v) in the reachability relation ≤ of the DAG, and may therefor be thought of as a direct translation of the reachability realtion ≤. Non-Tech Terms: Creating a new DAG that has the max number of edges possible while still adhering to the Reachability Relation.
+- Reachability Relation: Which is the partial order ≤ (conditional statement) on the vertices of a DAG. In the partial order, two vertices: *u* and *v* are ordered as *u ≤ v* exactly where there exists a directed path from *u* to *v* in the DAG; that is, when u can reach v (or v is reachable from u). Non-tech terms: The previous vertex position, rank or value should be lower than the current vertex.
+- *G<sub>b</sub>* Transitive Reduction: The representational DAG with the least edges that has the same reachability relation as the original DAG.  It has an edge *u → v* for every pair of vertices *(u, v)* in the covering relation of the reachability relation ≤ of the DAG. It is a subgraph of the DAG, formed by discarding the edges *u → v* for which the DAG also contains a longer directed path from *u* to *v*. Non-Tech Terms: Creating a new DAG that has the minimum number of edges possible while still adhering to the Reachability Relation.
+- G<sub>c</sub> Transitive Closure: The representational graph with the most edges that has the same reachability relation as the DAG. It has an edge *u → v* for every pair of vertices *(u,v)* in the reachability relation ≤ of the DAG, and may therefor be thought of as a direct translation of the reachability realtion ≤. Non-Tech Terms: Creating a new DAG that has the max number of edges possible while still adhering to the Reachability Relation.
 
 
 ![](https://files.catbox.moe/4tq6qn.jpg)
 
-G = Original DAG
-G<sub>b</sub> = Transitive Reduction
-G<sub>c</sub> = Transitive Closure.
+*G* = Original DAG
+*G<sub>b</sub>* = Transitive Reduction
+*G<sub>c</sub>* = Transitive Closure.
 
 So how does that relate to the Hacker X problem?
 
 Well lets take a sample set of couples and create a DAG out of it:
 [(65,844),(70,993),(201,427),(348,899),(388,268),(440,416),(459,421),(459,796),(744,291),(870,121)]
-```
-G=(V,E)
 
-V = T = Time
+- *G = (V, E)*
+- *V = T* = Time
+- *E = F* = Frequency
+- *dT* = delta Time = Change in time between the previous time and the current time.
+- *dF* = delta Frequency = Change in frequency between the previous time and the current time.
 
-E = F = Frequency
-
-dT = delta Time = Change in time between the previous time and the current time.
-
-dF = delta Frequency = Change in frequency between the previous time and the current time.
-```
-∑<sup>n</sup><sub>G=1</sub> = [(65,844),(70,993),(201,427),(348,899),(388,268),(440,416),(459,421),(459,796),(744,291),(870,121)]
+*∑<sup>n</sup><sub>G=1</sub>* = [(65,844),(70,993),(201,427),(348,899),(388,268),(440,416),(459,421),(459,796),(744,291),(870,121)]
 
 ### Stipulations:
 
-- According to the problem we need the to check if a specific object requires a new missile base on dT and dF to each other. 
-- And according to the problem, the delta change ration is 1:1, 1 unit of time is required for 1 unit of frequency shift the the oncomming objects. If a missile requires more than more frequency units than the alloted time between missiles, then a new missile will take its place.
-- Once a missile is in the air, it can relock onto any frequency that is one more or less than its current frequency vs time in regards subsequent objects after new missiles are fired. So three objects come in, (1,4),(2,6),(3,3). The second object requires a new missile since time only shifted one but frequency shifted by 2. However, the third object can be hit by the first missile since there is more time alloted between the first and third than frequency increase. This is our Reachability Relation.
+- According to the problem we need the to check if a specific object requires a new missile base on *dT* and *dF* to each other. 
+- And according to the problem, the delta change ration is `1:1`, `1` unit of time is required for `1` unit of frequency shift the the oncomming objects. If a missile requires more than more frequency units than the alloted time between missiles, then a new missile will take its place.
+- Once a missile is in the air, it can relock onto any frequency that is one more or less than its current frequency vs time in regards subsequent objects after new missiles are fired. So three objects come in, `(1,4),(2,6),(3,3)`. The second object requires a new missile since time only shifted one but frequency shifted by `2`. However, the third object can be hit by the first missile since there is more time alloted between the first and third than frequency increase. This is our Reachability Relation.
 - Now since we are looking for all possible missiles needed, our best approach is a Transitive Reduction, removing entries that don't require new missiles, and at the end, count the number of vertices in the resulting culled set.
 
 So we build our DAG on this by first order our couples set by the time (in case it is not sorted already). Next we take the sum and difference between Time vs Frequency and generate a list: 
 
 | Original Set | Transformer   | Transitive Set. | 
 | :----------- | :------------ | :-------------- |        
-|   (a, b)     | (a+b),(a-b)   |     (x, y)      |
+|   (*a*, *b*)     | (a+b),(a-b)   |     (*x, y*)      |
 | (65, 844)	   | =>(a+b,a-b)=> | (628, -226)     | 
 | (70, 993)	   | =>(a+b,a-b)=> | (656, 120)      |
 | (201, 427)   | =>(a+b,a-b)=> | (856, 24)       |   
@@ -176,14 +172,14 @@ So we build our DAG on this by first order our couples set by the time (in case 
 | (744, 291)   | =>(a+b,a-b)=> | (1247, -551)    |          
 | (870, 121)   | =>(a+b,a-b)=> | (1255, -337)    |            
 
-This allows us to compare a single value instead of two since we will only care about the difference value, y
+This allows us to compare a single value instead of two since we will only care about the difference value, *y*
 Why? The difference still represets the points x and y due to the mathematical associative rule of addition:
 
 #### Given vertex points
 
-( x<sub>a</sub>, y<sub>a</sub> ) = (10, 2)
+*( x<sub>a</sub>, y<sub>a</sub> ) = (10, 2)*
 
-( x<sub>b</sub>, y<sub>b</sub> ) = (15, 7)
+*( x<sub>b</sub>, y<sub>b</sub> ) = (15, 7)*
 
 
 
@@ -193,23 +189,23 @@ Why? The difference still represets the points x and y due to the mathematical a
 Comparing the tuples.
 | Formula | Examples |
 | :------ | :------- |
-| x<sub>a</sub> - y<sub>a</sub> = z<sub>a</sub> | 10 - 2 = 8 |
-| x<sub>b</sub> - y<sub>b</sub> = z<sub>b</sub> | 15 - 7 = 8 |
-| z<sub>b</sub> - z<sub>a</sub> = dz<sub>a</sub> | 8 - 8 = 0 |
+| *x<sub>a</sub> - y<sub>a</sub> = z<sub>a</sub>* | `10` - `2` = `8` |
+| *x<sub>b</sub> - y<sub>b</sub> = z<sub>b</sub>* | `15` - `7` = `8` |
+| *z<sub>b</sub> - z<sub>a</sub> = dz<sub>a</sub>* | `8` - `8` = `0` |
 
 Comparing the x-y differences.
 | Formula | Examples |
 | :------ | :------- |
-| x<sub>b</sub> - x<sub>a</sub> = dx<sub>a</sub> |  15 - 10 = 5 |
-| y<sub>b</sub> - y<sub>a</sub> = dy<sub>a</sub> | 7 - 2 = 5 |
-| dy<sub>a</sub>  - dx<sub>a</sub>  = dz<sub>a</sub> | 5 - 5 = 0 |
+| *x<sub>b</sub> - x<sub>a</sub> = dx<sub>a</sub>* |  `15` - `10` = `5` |
+| *y<sub>b</sub> - y<sub>a</sub> = dy<sub>a</sub>* | `7` - `2` = `5` |
+| *dy<sub>a</sub>  - dx<sub>a</sub>  = dz<sub>a</sub>* | `5` - `5` = `0` |
 
-`Equivalent Formula:` (x<sub>b</sub> - x<sub>a</sub>) - (x<sub>b</sub> - y<sub>b</sub>) = (x<sub>b</sub> - x<sub>a</sub>) - (y<sub>b</sub> - y<sub>a</sub>)
+`Equivalence Formula:` *(x<sub>b</sub> - x<sub>a</sub>) - (x<sub>b</sub> - y<sub>b</sub>) = (x<sub>b</sub> - x<sub>a</sub>) - (y<sub>b</sub> - y<sub>a</sub>)*
 
 So if we check the difference between the vertex points or the x-y difference we end up in the same result. Since using a single number comparison is simpler than a tuple comparison, going with the x-y difference solution is much more efficient. 
 
 At this point, all we really care about is the differce on Time vs Frequency, due to our Reeachability Relation, as Frequency is dependant on time.
 [-226, 120, 24,38, -779, 749, 453, -923, -551, -337]
 
-There we iterate through the the positions, checking through through one loop through every element in the set, O(n) and then have it go through another loop only comparing through the set only if specific conditions is met, and if the specific condition is no longer met during the search, the code will move on to the next set item for its own iterations, reducing n number of left over iterations, where the iterations could be from n to under n<sup>2</sup> number of iterations, O(logn). Since O(logn) is dependent on the O(n) portion, the final complexity is O(nlogn), one step down from O(n<sup>2</sup>).
+There we iterate through the the positions, checking through through one loop through every element in the set, *O(n)* and then have it go through another loop only comparing through the set only if specific conditions is met, and if the specific condition is no longer met during the search, the code will move on to the next set item for its own iterations, reducing n number of left over iterations, where the iterations could be from n to under *n<sup>2</sup>* number of iterations, *O(logn)*. Since *O(logn)* is dependent on the *O(n)* portion, the final complexity is *O(nlogn)*, one step down from *O(n<sup>2</sup>)*.
 
