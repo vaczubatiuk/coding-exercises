@@ -35,7 +35,7 @@ if __name__ == '__main__':
         with open(sys.argv[1],'r') as file:
             lines = file.readlines()
             length = lines.pop
-            lines = lines.strip(" ")
+            lines = lines.split()
             for i in lines:
                 x = int(i)
                 numberSet.append(x)
