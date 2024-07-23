@@ -35,8 +35,7 @@ if __name__ == '__main__':
         with open(sys.argv[1],'r') as file:
             lines = file.readlines()
             length = lines.pop(0)
-            lines = lines.split()
-            numberSet = [int(a) for a in lines]
+            numberSet = [int(a) for a in lines.split()]
         if len(sys.argv) > 2:
             DEBUG = True
         
