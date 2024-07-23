@@ -36,9 +36,7 @@ if __name__ == '__main__':
             lines = file.readlines()
             length = lines.pop(0)
             lines = lines.split()
-            for i in lines:
-                x = int(i)
-                numberSet.append(x)
+            numberSet = [int(a) for a in lines]
         if len(sys.argv) > 2:
             DEBUG = True
         
