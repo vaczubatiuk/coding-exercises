@@ -34,7 +34,7 @@ if __name__ == '__main__':
         numberSet = list()
         with open(sys.argv[1],'r') as file:
             lines = file.readlines()
-            length = lines.pop
+            length = lines.pop(0)
             lines = lines.split()
             for i in lines:
                 x = int(i)
