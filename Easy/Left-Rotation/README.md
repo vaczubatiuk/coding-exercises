@@ -15,16 +15,16 @@ Complete the rotateLeft function in the editor below.
 
 rotateLeft has the following parameters:
 
-- int d: the amount to rotate by
-- int arr[n]: the array to rotate
+- int $d$: the amount to rotate by
+- int $arr[n]$ : the array to rotate
 Returns
 
 - int[n]: the rotated array
 
 ### Input Format
 
-The first line contains two space-separated integers that denote n, the number of integers, and d, the number of left rotations to perform.
-The second line contains n space-separated integers that describe arr[ ].
+The first line contains two space-separated integers that denote $n$, the number of integers, and $d$, the number of left rotations to perform.
+The second line contains n space-separated integers that describe $arr[ ]$.
 
 ### Constraints
 $1 \leq n \leq 10^5$
