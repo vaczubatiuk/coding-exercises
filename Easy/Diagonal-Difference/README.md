@@ -9,7 +9,7 @@ A B C
 D E F
 G H I
 ```
-
+```
 $$
 \begin{bmatrix}
 A & B & C \cr
@@ -17,7 +17,7 @@ D & E & F \cr
 G & H & I
 \end{bmatrix}
 $$
-
+```
 
 
 | Description | Formula   |
