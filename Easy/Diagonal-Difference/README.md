@@ -26,7 +26,7 @@ Complete the  function in the editor below.
 
 diagonalDifference takes the following parameter:
 
-int arr[n][m]: an array of integers
+int $arr[n][m]$: an array of integers
 
 ### Return
 
@@ -71,4 +71,4 @@ The secondary diagonal is:
 Sum across the secondary diagonal: $4 + 5 + 10 = 19$
 Difference: $|4 - 19| = 15$
 
-Note: $|x|$ is the absolute value of x
+Note: $|x|$ is the absolute value of $x$
