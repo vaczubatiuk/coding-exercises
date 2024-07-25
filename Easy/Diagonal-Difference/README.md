@@ -13,7 +13,7 @@ G & H & I
 $$
 
 
-$\begin{bmatrix}1&2&3\cr4&5&6\end{bmatrix}$
+$A=\begin{bmatrix}1&2&3\cr4&5&6\end{bmatrix}$
 
 | Description | Formula   |
 | :----------- | :------------ |     
