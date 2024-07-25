@@ -11,8 +11,13 @@ G H I
 ```
 
 $$
-\displaystyle\sum_{k=3}^5 k^2=3^2 + 4^2 + 5^2 =50
+\begin{bmatrix}
+A & B & C \cr
+D & E & F \cr
+G & H & I
+\end{bmatrix}
 $$
+
 
 
 | Description | Formula   |
@@ -22,17 +27,6 @@ $$
 | Their absolute difference is | $\| X - Y \|$ |
   
 
-
-
-| Description                | Formula          |
-| :------------------------- | : -------------- |
-| The left-to-right diagonal | $X = A + E + I$  |
-
-: 
-
-$C + E + G = Y<sub>R</sub>$ 
-
-Their absolute difference is $| X<sub>L</sub> - Y<sub>R</sub> |$
 
 ## Function description
 
