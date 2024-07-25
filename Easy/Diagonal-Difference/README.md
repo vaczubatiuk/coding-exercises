@@ -4,7 +4,13 @@ Given a square matrix, calculate the absolute difference between the sums of its
 
 For example, the square matrix  is shown below:
 
-$$\begin{bmatrix}A&B&C\crD&E&F\crG&H&I\end{bmatrix}$$
+$$
+\begin{bmatrix}
+A & B & C \cr
+D & E & F \cr
+G & H & I
+\end{bmatrix}
+$$
 
 
 | Description | Formula   |
