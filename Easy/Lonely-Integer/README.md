@@ -33,7 +33,7 @@ $$
 
 $$
 \begin{align}
-n_i  n_(i+1)$ where: $n_(i+l) \leq n
+n_i  n_(i+1)$ where: $n_(i+l) \leq n \\
 \end{align}
 $$
 
