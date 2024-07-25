@@ -62,6 +62,15 @@ The primary diagonal is:
    5
      -12
 ```
+
+$$
+\begin{bmatrix}
+11 & & \cr
+& 5 $ \cr
+& & -12
+\end{bmatrix}
+$$
+
 Sum across the primary diagonal: $11 + 5 - 12 = 4$
 
 The secondary diagonal is:
