@@ -17,9 +17,9 @@ $$
 
 | Description | Formula   |
 | :----------- | :------------ |     
-| The left-to-right diagonal | $X = A + E + I$   |
-| (65, 844)	   | =>(a+b,a-b)=> |
-| (70, 993)	   | =>(a+b,a-b)=> |
+| The left-to-right diagonal | $X = A + E + I$ |
+| The right to left diagonal | $C + E + G = Y$ |
+| (70, 993)	   | $| X - Y |$ |
 | (201, 427)   | =>(a+b,a-b)=> |  
 | (348, 899)   | =>(a+b,a-b)=> |        
 | (388, 268)   | =>(a+b,a-b)=> |          
@@ -35,7 +35,7 @@ $$
 | :------------------------- | : -------------- |
 | The left-to-right diagonal | $X = A + E + I$  |
 
-The right to left diagonal: 
+: 
 
 $C + E + G = Y<sub>R</sub>$ 
 
