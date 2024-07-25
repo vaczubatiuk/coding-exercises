@@ -22,15 +22,12 @@ Given an array of integers, where all elements but one occur twice, find the uni
 &emsp;A line contains $n$ space-separated integers that describe the values in .
 
 ### Constraints
-$$
-1 \leq n \leq 100
-$$
-$$
-n \mod 2  \neg  0
-$$
-$$
-n_i  \neg  n_(i+1) /cr
-where: n_(i+l) \leq n
-$$
-- &emsp;&emsp; $n_i  \neg  n_(i-1) where n_(i-1) \geq 1$
+
+$1 \leq n \leq 100$
+
+$n \mod 2  \neg  0$
+
+$n_i  \neg  n_(i+1)$ where: n_(i+l) \leq n
+
+- &emsp;&emsp; $n_i  \neg  n_(i-1)$ ∵ n_(i-1) \geq 1$
 - &emsp;&emsp; $0 \leq arr[i] \leq 100$, where $0 \leq i \leq n$
