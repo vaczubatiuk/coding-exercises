@@ -23,12 +23,12 @@ Given an array of integers, where all elements but one occur twice, find the uni
 
 ### Constraints
 
-$1 \leq n \leq 100$
+&emsp;&emsp; - $1 \leq n \leq 100$
 
-$n \mod 2 = \not  0$
+&emsp;&emsp; - $n \mod 2 = \not  0$
 
-$n_i  n_{i+1} ∵ n_{i+l} \leq n$
+&emsp;&emsp; - $n_i  n_{i+1} ∵ n_{i+l} \leq n$
 
-$n_i  \neg  n_{i-1} ∵ n_{i-1} \geq 1$
+&emsp;&emsp; - $n_i  \neg  n_{i-1} ∵ n_{i-1} \geq 1$
 
-$0 \leq arr[i] \leq 100, ∵ 0 \leq i \leq n$
+&emsp;&emsp; - $0 \leq arr[i] \leq 100, ∵ 0 \leq i \leq n$
