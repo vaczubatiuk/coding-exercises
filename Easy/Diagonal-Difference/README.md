@@ -15,8 +15,9 @@ $$
 $$
 
 The left-to-right diagonal: 
+
 $$
-\A + E + I = X
+X = A + E + I
 $$
 
 The right to left diagonal: $C + E + G = Y<sub>R</sub>$ 
