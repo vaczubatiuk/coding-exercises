@@ -13,6 +13,8 @@ G & H & I
 $$
 
 
+$\begin{bmatrix}1&2&3\cr4&5&6\end{bmatrix}$
+
 | Description | Formula   |
 | :----------- | :------------ |     
 | The left-to-right diagonal   | $X = A + E + I$ |
