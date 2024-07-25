@@ -5,6 +5,7 @@ Given five positive integers, find the minimum and maximum values that can be ca
 #### Example
 
 &emsp;`arr = [1, 3, 5, 7, 9, ]`
+
 &emsp;The minimum sum is `1 + 3 + 5 + 7 = 16` and the maximum sum is `3 + 5 + 7 + 9 = 24`. The function prints
 
 &emsp;`16 24`
