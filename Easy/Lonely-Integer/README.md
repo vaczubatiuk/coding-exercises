@@ -25,7 +25,7 @@ Given an array of integers, where all elements but one occur twice, find the uni
 
 $1 \leq n \leq 100$
 
-$n \mod 2  \not  0$
+$n \mod 2 = \not  0$
 
 $n_i  n_(i+1)$ where: n_(i+l) \leq n
 
