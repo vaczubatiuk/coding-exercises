@@ -5,9 +5,9 @@ Given five positive integers, find the minimum and maximum values that can be ca
 #### Example
 
 - `arr = [1, 3, 5, 7, 9, ]`
-- The minimum sum is `1 + 3 + 5 + 7 = 16`
-- maximum sum is `3 + 5 + 7 + 9 = 24`. The function prints
-- `16 24`
+- minimum sum: `1 + 3 + 5 + 7 = 16`
+- maximum sum: `3 + 5 + 7 + 9 = 24`
+- The function prints: `16 24`
 
 #### Function Description
 
