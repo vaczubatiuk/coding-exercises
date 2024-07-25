@@ -13,7 +13,7 @@ Given an array of integers, where all elements but one occur twice, find the uni
 
 &emsp;lonelyinteger has the following parameter(s):
 
-- &emsp;`int a[n]`: an array of integers
+- &emsp;`int` $a[n]$: an array of integers
 
 ### Returns
 - &emsp;`int`: the element that occurs only once
