@@ -17,17 +17,10 @@ $$
 
 | Description | Formula   |
 | :----------- | :------------ |     
-| The left-to-right diagonal | $X = A + E + I$ |
-| The right to left diagonal | $C + E + G = Y$ |
-| (70, 993)	   | $\| X - Y \|$ |
-| (201, 427)   | =>(a+b,a-b)=> |  
-| (348, 899)   | =>(a+b,a-b)=> |        
-| (388, 268)   | =>(a+b,a-b)=> |          
-| (440, 416)   | =>(a+b,a-b)=> |         
-| (459, 421)   | =>(a+b,a-b)=> |          
-| (459, 796)   | =>(a+b,a-b)=> |         
-| (744, 291)   | =>(a+b,a-b)=> |         
-| (870, 121)   | =>(a+b,a-b)=> |       
+| The left-to-right diagonal   | $X = A + E + I$ |
+| The right to left diagonal   | $C + E + G = Y$ |
+| Their absolute difference is | $\| X - Y \|$ |
+  
 
 
 
