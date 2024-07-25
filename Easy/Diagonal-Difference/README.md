@@ -16,7 +16,7 @@ $$
 
 | Description                | Formula          |
 | :------------------------- | : -------------- |
-| The left-to-right diagonal | $X = A + E + I$  |
+| The left-to-right diagonal | X = A + E + I  |
 
 The right to left diagonal: 
 
