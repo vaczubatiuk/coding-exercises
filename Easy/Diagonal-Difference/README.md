@@ -9,11 +9,11 @@ A B C
 D E F
 G H I
 ```
-```
+
 $$
 \displaystyle\sum_{k=3}^5 k^2=3^2 + 4^2 + 5^2 =50
 $$
-```
+
 The left-to-right diagonal = A + E + I = X<sub>L</sub>. The right to left diagonal: C + E + G = Y<sub>R</sub>. Their absolute difference is | X<sub>L</sub> - Y<sub>R</sub> |
 
 ## Function description
