@@ -15,9 +15,9 @@ $$
 $$
 
 
-| Original Set | Transformer   | Transitive Set. | 
+| Description | Formula   | Transitive Set. | 
 | :----------- | :------------ | :-------------- |        
-|   (*a*, *b*)     | (a+b),(a-b)   |     (*x, y*)      |
+| The left-to-right diagonal | $X = A + E + I$   |     (*x, y*)      |
 | (65, 844)	   | =>(a+b,a-b)=> | (628, -226)     | 
 | (70, 993)	   | =>(a+b,a-b)=> | (656, 120)      |
 | (201, 427)   | =>(a+b,a-b)=> | (856, 24)       |   
