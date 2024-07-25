@@ -5,12 +5,12 @@ Given a square matrix, calculate the absolute difference between the sums of its
 For example, the square matrix  is shown below:
 
 ```
-1 2 3
-4 5 6
-9 8 9
+A B C
+D E F
+G H I
 ```
 
-The left-to-right diagonal = . The right to left diagonal = . Their absolute difference is .
+The left-to-right diagonal = A + E + I = X<sub>L</sub>. The right to left diagonal: C + E + G = Y<sub>R</sub>. Their absolute difference is | X<sub>L</sub> - Y<sub>R</sub>.
 
 ## Function description
 
