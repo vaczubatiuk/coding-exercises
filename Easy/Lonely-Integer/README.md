@@ -32,9 +32,9 @@ n \mod 2 = \not  0
 $$
 
 $$
-\begin{align}
-n_i  n_(i+1) ∵ n_(i+l) \leq n \\
-\end{align}
+\begin{aligned}
+n_i  n_{i+1} ∵ n_{i+l} \leq n \\
+\end{aligned}
 $$
 
 $$
