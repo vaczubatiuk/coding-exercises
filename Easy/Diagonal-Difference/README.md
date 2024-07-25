@@ -12,9 +12,6 @@ G & H & I
 \end{bmatrix}
 $$
 
-
-$A=\begin{bmatrix}1&2&3\cr4&5&6\end{bmatrix}$
-
 | Description | Formula   |
 | :----------- | :------------ |     
 | The left-to-right diagonal   | $X = A + E + I$ |
@@ -72,6 +69,6 @@ The secondary diagonal is:
    5
 10
 Sum across the secondary diagonal: 4 + 5 + 10 = 19
-Difference: |4 - 19| = 15
+Difference: $|4 - 19|$ = 15
 
-Note: |x| is the absolute value of x
+Note: $|x|$ is the absolute value of x
