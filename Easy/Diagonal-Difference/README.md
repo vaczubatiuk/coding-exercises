@@ -4,12 +4,6 @@ Given a square matrix, calculate the absolute difference between the sums of its
 
 For example, the square matrix  is shown below:
 
-```
-A B C
-D E F
-G H I
-```
-```
 $$
 \begin{bmatrix}
 A & B & C \cr
@@ -17,7 +11,6 @@ D & E & F \cr
 G & H & I
 \end{bmatrix}
 $$
-```
 
 
 | Description | Formula   |
