@@ -34,8 +34,8 @@ int: the absolute diagonal difference
 
 ### Input Format
 
-The first line contains a single integer, , the number of rows and columns in the square matrix .
-Each of the next  lines describes a row, , and consists of  space-separated integers .
+The first line contains a single integer, $n$, the number of rows and columns in the square matrix .
+Each of the next $n$ lines describes a row, $arr[i]$, and consists of $n$ space-separated integers $arr[i][j]$
 
 ## Constraints
 
@@ -61,14 +61,14 @@ The primary diagonal is:
 11
    5
      -12
-Sum across the primary diagonal: 11 + 5 - 12 = 4
+Sum across the primary diagonal: $11 + 5 - 12 = 4$
 
 The secondary diagonal is:
 
      4
    5
 10
-Sum across the secondary diagonal: 4 + 5 + 10 = 19
-Difference: $|4 - 19|$ = 15
+Sum across the secondary diagonal: $4 + 5 + 10 = 19$
+Difference: $|4 - 19| = 15$
 
 Note: $|x|$ is the absolute value of x
