@@ -24,4 +24,4 @@ Given an array of integers, where all elements but one occur twice, find the uni
 ### Constraints
 - &emsp;&emsp; $1 \leq n \leq 100$
 - &emsp;&emsp;It is guaranteed that `n` is an odd number and that there is one unique element.
-- &emsp;&emsp;`0 ≤ arr[i] ≤ 100`, where `0 ≤ i ≤ n` 
+- &emsp;&emsp;`$0 \leq arr[i] \leq 100$`, where `$0 \leq i \leq n$` 
