@@ -57,21 +57,24 @@ Return the absolute difference between the sums of the matrix's two diagonals as
 ## Explanation
 
 The primary diagonal is:
-```
-11
-   5
-     -12
-```
 
 $$
 \begin{bmatrix}
 11 & & \cr
-& 5 $ \cr
+& 5 & \cr
 & & -12
 \end{bmatrix}
 $$
 
+| Description | Formula   |
+| :----------- | :------------ |     
+| The left-to-right diagonal   | $\begin{bmatrix}11 & & \cr& 5 & \cr& & -12\end{bmatrix}$ |
+| The right to left diagonal   | $C + E + G = Y$ |
+| Their absolute difference is | $\| X - Y \|$ |
 Sum across the primary diagonal: $11 + 5 - 12 = 4$
+
+
+$\begin{bmatrix}11 & & \cr& 5 & \cr& & -12\end{bmatrix}$
 
 The secondary diagonal is:
 ```
