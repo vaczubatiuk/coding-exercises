@@ -64,6 +64,8 @@ $$
 \end{bmatrix}
 $$
 
+Sum across the secondary diagonal: $11 + 5 + -12 = 4$
+
 The secondary diagonal is:
 
 $$
@@ -74,12 +76,8 @@ $$
 \end{bmatrix}
 $$
 
-```
-     4
-   5
-10
-```
 Sum across the secondary diagonal: $4 + 5 + 10 = 19$
+
 Difference: $|4 - 19| = 15$
 
 Note: $|x|$ is the absolute value of $x$
