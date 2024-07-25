@@ -27,7 +27,7 @@ The first line contains two space-separated integers that denote n, the number o
 The second line contains n space-separated integers that describe arr[ ].
 
 ### Constraints
-1 ≤ n ≤ 10<sup>5</sup>
+$1 ≤ n ≤ 10<sup>5</sup$
 1 ≤ d ≤ n
 1 ≤ a[i] ≤ 10<sup>6</sup>
 
