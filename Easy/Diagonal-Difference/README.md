@@ -66,8 +66,6 @@ $$
 
 Sum across the secondary diagonal: $11 + 5 + -12 = 4$
 
-The secondary diagonal is:
-
 $$
 \begin{bmatrix}
 & & 4\cr
