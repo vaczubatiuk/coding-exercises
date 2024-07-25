@@ -29,7 +29,7 @@ $$
 n \mod 2  \neg  0
 $$
 $$
-n_i  \neg  n_(i+1) /r
+n_i  \neg  n_(i+1) /cr
 where: n_(i+l) \leq n
 $$
 - &emsp;&emsp; $n_i  \neg  n_(i-1) where n_(i-1) \geq 1$
