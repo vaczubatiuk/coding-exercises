@@ -13,14 +13,13 @@ G H I
 $$
 \displaystyle\sum_{k=3}^5 k^2=3^2 + 4^2 + 5^2 =50
 $$
+| | |
+| :-------------------------| : --------------
+The left-to-right diagonal: | $X = A + E + I$
 
-The left-to-right diagonal: 
+The right to left diagonal: 
 
-$$
-X = A + E + I
-$$
-
-The right to left diagonal: $C + E + G = Y<sub>R</sub>$ 
+$C + E + G = Y<sub>R</sub>$ 
 
 Their absolute difference is $| X<sub>L</sub> - Y<sub>R</sub> |$
 
