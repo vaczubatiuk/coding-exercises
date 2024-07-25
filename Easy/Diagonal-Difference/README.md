@@ -2,9 +2,7 @@
 
 Given a square matrix, calculate the absolute difference between the sums of its diagonals.
 
-For example, the square matrix  is shown below:
-
-$$
+For example, the square matrix  is shown below: $$
 \begin{bmatrix}
 A & B & C \cr
 D & E & F \cr
