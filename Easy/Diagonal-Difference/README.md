@@ -65,6 +65,7 @@ $$
 $$
 
 The secondary diagonal is:
+
 $$
 \begin{bmatrix}
 & & 4\cr
