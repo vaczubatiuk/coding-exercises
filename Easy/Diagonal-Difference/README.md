@@ -16,7 +16,7 @@ $$
 
 The left-to-right diagonal: 
 $$
-A + E + I = X<sub>L</sub>
+A + E + I = X
 $$
 
 The right to left diagonal: $C + E + G = Y<sub>R</sub>$ 
