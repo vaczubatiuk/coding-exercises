@@ -29,8 +29,9 @@ The second line contains n space-separated integers that describe arr[ ].
 ### Constraints
 $1 \leq n \leq 10^5$
 
-1 ≤ d ≤ n
-1 ≤ a[i] ≤ 10<sup>6</sup>
+$1 \leq d \leq n$
+
+$1 \leq a[i] \leq 10^6$
 
 ### Sample Input
 ```css
