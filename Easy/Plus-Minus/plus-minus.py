@@ -15,7 +15,7 @@ def print_or_log(string):
 # Parameters: a list of integers
 # Output: Prints the percentage results in 6 decimal place format
 # ==============================================================================
-def plusMinus(numberSet):
+def plusMinus(numberSet) -> None:
     results = [0,0,0]
     for i in numberSet:
         if i > 0:
@@ -30,7 +30,7 @@ def plusMinus(numberSet):
 
 if __name__ == '__main__':
     
-    if len(sys.arvg) > 1:
+    if len(sys.argv) > 1:
         numberSet = list()
         with open(sys.argv[1],'r') as file:
             lines = file.readlines()
