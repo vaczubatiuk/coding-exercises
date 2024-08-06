@@ -131,4 +131,4 @@ f"""/===========================================================================
         log.close()
     if (os.path.getsize("OUTPUT.log") == 0):
         os.remove("OUTPUT.log")
-    
+    log.close()

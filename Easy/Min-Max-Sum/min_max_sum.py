@@ -30,7 +30,7 @@ def leftRotation(arr):
 # Parameter: a list of integers.
 # Output: prints min and max results to the command line.
 # ==============================================================================
-def minMaxSum(arr):
+def minMaxSum(arr) -> None:
     # Setting min and max to infinity and negative infinity respectfuly.
     minResult,maxResult = (float('inf'),float('-inf'))
     # Cloning the list so we don't manipuate the original.
@@ -58,7 +58,7 @@ def minMaxSum(arr):
 # Parameter: a list of integers.
 # Output: prints min and max results to the command line.
 # ==============================================================================
-def minMaxSum2(arr):
+def minMaxSum2(arr) -> None:
     # We sort the list (Complexity O(nlogn)
     r1 = sorted(arr)
     # Clone the sorted
@@ -90,4 +90,4 @@ if __name__ == '__main__':
         os.remove("OUTPUT.log")
     minMaxSum(entry)
     minMaxSum2(entry)
-
+    log.close()
